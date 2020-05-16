@@ -1,8 +1,11 @@
 var express = require("express");
 var router = express.Router() ;
 
-router.get("/", function(req,res){
-    res.send("hola como estas RESULT BU");
-})
+const controller = require("../controllers/resultBuscadorController");
+
+
+
+router.get("/", controller.resultBuscador);
+
 
 module.exports = router;

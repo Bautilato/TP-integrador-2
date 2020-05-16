@@ -1,8 +1,11 @@
 var express = require("express");
 var router = express.Router() ;
 
-router.get("/", function(req,res){
-    res.send("hola como estas favorito");
-})
+const controller = require("../controllers/favoritoController");
+
+
+
+router.get("/", controller.favoritos);
+
 
 module.exports = router;

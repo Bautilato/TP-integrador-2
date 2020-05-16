@@ -30,7 +30,7 @@ window.addEventListener("load",function functionName(){
 if (sessionStorage.getItem("nombre")!= null) {
   document.querySelector(".Botonsesion").style.display = "none"
   document.querySelector(".hola").innerHTML = "HOLA " + sessionStorage.getItem("nombre") + "!"
-  document.querySelector(".favs").innerHTML = "<a href='favoritos.html'>Favoritos</a>"
+  document.querySelector(".favs").innerHTML = "<a href='/favoritos'>Favoritos</a>"
 }
 
 arrayDePelisFavoritas = JSON.parse(window.sessionStorage.getItem("favorita"));

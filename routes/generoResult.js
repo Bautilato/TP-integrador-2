@@ -1,8 +1,11 @@
 var express = require("express");
 var router = express.Router() ;
 
-router.get("/", function(req,res){
-    res.send("hola como estas GN");
-})
+const controller = require("../controllers/generoResultController");
+
+
+
+router.get("/", controller.generoResult);
+
 
 module.exports = router;
