@@ -13,7 +13,7 @@ window.addEventListener("load",function functionName() {
           console.log(arrayDeGeneros[i]);
           genero = arrayDeGeneros[i].name
           console.log(genero);
-          document.querySelector("ul.listadoGeneros").innerHTML += "<div class='ab'><li><a href='generoResult.html?idDeGenero="+arrayDeGeneros[i].id+"&nombreDeGenero="+arrayDeGeneros[i].name+"'>" + genero + "</a></li></div><br>"
+          document.querySelector("ul.listadoGeneros").innerHTML += "<div class='ab'><li><a href='/generoResult?idDeGenero="+arrayDeGeneros[i].id+"&nombreDeGenero="+arrayDeGeneros[i].name+"'>" + genero + "</a></li></div><br>"
 
       }
 
@@ -52,7 +52,7 @@ window.addEventListener("load",function functionName() {
     if (sessionStorage.getItem("nombre")!= null) {
       document.querySelector(".Botonsesion").style.display = "none"
       document.querySelector(".hola").innerHTML = "HOLA " + sessionStorage.getItem("nombre") + "!"
-      document.querySelector(".favs").innerHTML = "<a href='favoritos.html'>Favoritos</a>"
+      document.querySelector(".favs").innerHTML = "<a href='/favoritos'>Favoritos</a>"
     }
 
 

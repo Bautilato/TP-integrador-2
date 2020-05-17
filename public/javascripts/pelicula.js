@@ -71,7 +71,7 @@ console.log(id);
       var h2="";
       for (var i = 0; i < generos.length; i++) {
         // listaGeneros.push(generos[i].name)
-        h2 += '<a href="generoResult.html?idDeGenero='+generos[i].id+'&nombreDeGenero='+generos[i].name+'">' +generos[i].name +'</a>  '
+        h2 += '<a href="/generoResult?idDeGenero='+generos[i].id+'&nombreDeGenero='+generos[i].name+'">' +generos[i].name +'</a>  '
       }
       console.log(h2);
 
@@ -161,7 +161,7 @@ for (var i = 0; i < 5; i++) {
   console.log(tituloDePeli);
   console.log(idDePeli);
 
-  document.querySelector(".dropdown-menu").innerHTML += "<a class='dropdown-item' href='pelicula.html?idDePelicula=" + idDePeli + "'>" + tituloDePeli + "</a>"
+  document.querySelector(".dropdown-menu").innerHTML += "<a class='dropdown-item' href='/pelicula?idDePelicula=" + idDePeli + "'>" + tituloDePeli + "</a>"
 
 
 

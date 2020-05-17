@@ -71,7 +71,7 @@ if (arrayDePelisFavoritas.length>0) {
          // genero el LI
          var li;
          li = "<li class='generoprimero'>"
-         li +=   "<a href='pelicula.html?idDePelicula="+idDePelicula+"'>"
+         li +=   "<a href='/pelicula?idDePelicula="+idDePelicula+"'>"
          li +=     "<div class='nombredepelicula'>"
          li +=       "<h2>" + pelicula.title + "</h2>"
          li +=      "</div>"

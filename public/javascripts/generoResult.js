@@ -73,7 +73,7 @@ for (var i = 0; i < arrayDePeliculas.length; i++) {
       idDePelicula= arrayDePeliculas[i].id;
 
       li = "<li class='generoprimero'>"
-      li +=   "<a href='pelicula.html?idDePelicula="+idDePelicula+"'>"
+      li +=   "<a href='/pelicula?idDePelicula="+idDePelicula+"'>"
       li +=     "<div class='nombredepelicula'>"
       li +=       "<h2>" + titulo + "</h2>"
       li +=      "</div>"
@@ -91,7 +91,7 @@ for (var i = 0; i < arrayDePeliculas.length; i++) {
 if (sessionStorage.getItem("nombre")!= null) {
   document.querySelector(".Botonsesion").style.display = "none"
   document.querySelector(".hola").innerHTML = "HOLA " + sessionStorage.getItem("nombre") + "!"
-  document.querySelector(".favs").innerHTML = "<a href='favoritos.html'>Favoritos</a>";
+  document.querySelector(".favs").innerHTML = "<a href='/favoritos'>Favoritos</a>";
 
 // var boton = document.querySelectorAll("button.estrellita")
 // boton.onclick = agregarFavoritos()

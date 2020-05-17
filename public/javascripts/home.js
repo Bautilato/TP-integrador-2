@@ -55,7 +55,7 @@ window.addEventListener("load",function functionName() {
 if (sessionStorage.getItem("nombre")!= null) {
   document.querySelector(".Botonsesion").style.display = "none"
   document.querySelector(".hola").innerHTML = "HOLA " + sessionStorage.getItem("nombre") + "!"
-  document.querySelector(".favs").innerHTML = "<a href='favoritos.html'>Favoritos</a>"
+  document.querySelector(".favs").innerHTML = "<a href='/favoritos'>Favoritos</a>"
 }
 
 
@@ -90,7 +90,7 @@ fetch(url)
        var imagen = 'https://image.tmdb.org/t/p/original'
       var poster =imagen +  data.results[i].poster_path
       console.log(poster);
-      document.querySelector("#carousel1").innerHTML += "<div id='movie" + i + "' class='carousel-item'><a href='pelicula.html?idDePelicula="+ idDePelicula+"'><img class='imagen' src='" + poster + "' alt='First slide'><div class='carousel-caption d-none d-md-block Cartext'><h5 class='nombre'>" + titulo + "</h5></a></div></div>"
+      document.querySelector("#carousel1").innerHTML += "<div id='movie" + i + "' class='carousel-item'><a href='/pelicula?idDePelicula="+ idDePelicula+"'><img class='imagen' src='" + poster + "' alt='First slide'><div class='carousel-caption d-none d-md-block Cartext'><h5 class='nombre'>" + titulo + "</h5></a></div></div>"
 
 
 
@@ -116,7 +116,7 @@ fetch(url2)
       var descripcion = data.results[i].overview
        var imagen = 'https://image.tmdb.org/t/p/original'
       var poster =imagen +  data.results[i].poster_path
-      document.querySelector("#carousel2").innerHTML += "<div id='movie" + (i+5) + "' class='carousel-item'><a href='pelicula.html?idDePelicula="+ idDePelicula+"'><img class='imagen' src='" + poster + "' alt='First slide'><div class='carousel-caption d-none d-md-block Cartext'><h5 class='nombre'>" + titulo + "</h5></a></div></div>";
+      document.querySelector("#carousel2").innerHTML += "<div id='movie" + (i+5) + "' class='carousel-item'><a href='/pelicula?idDePelicula="+ idDePelicula+"'><img class='imagen' src='" + poster + "' alt='First slide'><div class='carousel-caption d-none d-md-block Cartext'><h5 class='nombre'>" + titulo + "</h5></a></div></div>";
 
 
 
@@ -147,7 +147,7 @@ fetch(url3)
       var descripcion = data.results[i].overview
        var imagen = 'https://image.tmdb.org/t/p/original'
       var poster =imagen +  data.results[i].poster_path
-      document.querySelector("#carousel3").innerHTML += "<div id='movie" + (i+10) + "' class='carousel-item '><a href='pelicula.html?idDePelicula="+ idDePelicula+"'><img class='imagen' src='" + poster + "' alt='First slide'><div class='carousel-caption d-none d-md-block Cartext'><h5 class='nombre'>" + titulo + "</h5></div></div>"
+      document.querySelector("#carousel3").innerHTML += "<div id='movie" + (i+10) + "' class='carousel-item '><a href='/pelicula?idDePelicula="+ idDePelicula+"'><img class='imagen' src='" + poster + "' alt='First slide'><div class='carousel-caption d-none d-md-block Cartext'><h5 class='nombre'>" + titulo + "</h5></div></div>"
 
 
 
