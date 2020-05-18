@@ -6,12 +6,12 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var homeRouter = require('./routes/home');
-var favoritosRouter = require('./routes/favoritos');
-var generoResultRouter = require('./routes/generoResult');
-var generosRouter = require('./routes/generos');
-var peliculaRouter = require('./routes/pelicula');
-var resultBuscadorRouter = require('./routes/resultBuscador');
+var homeRouter = require('./routes/homeRouter');
+var favoritosRouter = require('./routes/favoritosRouter');
+var generoResultRouter = require('./routes/generoResultRouter');
+var generosRouter = require('./routes/generosRouter');
+var peliculaRouter = require('./routes/peliculaRouter');
+var resultBuscadorRouter = require('./routes/resultBuscadorRouter');
 
 
 var app = express();
