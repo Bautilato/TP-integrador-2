@@ -1,6 +1,6 @@
-CREATE DATABASE `datos_proyecto`;
-
-CREATE TABLE `usuarios` (
+CREATE DATABASE IF NOT EXISTS `datos_proyecto`;
+USE `datos_proyecto`;
+CREATE TABLE  `usuarios` (
 	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
 	`nombre` VARCHAR(255) NOT NULL,
     `email` VARCHAR(255) DEFAULT NULL,
@@ -9,10 +9,10 @@ CREATE TABLE `usuarios` (
     current_timestamp() ON UPDATE
      current_timestamp(),
      PRIMARY KEY (`id`)
-)ENGINE=innoDB DEFAULT 
-CHARSET=utf8mb4;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+;
 
-CREATE TABLE `resenias` (
+CREATE TABLE  `resenias` (
 	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
 	`id_pelicula` INT(10) DEFAULT NULL,
     `id_usuario` INT(10) UNSIGNED DEFAULT NULL,
@@ -30,8 +30,8 @@ CREATE TABLE `resenias` (
     FOREIGN KEY (`id_usuario`)
     REFERENCES `usuarios` (`id`)
 
-)ENGINE= innoDB DEFAULT 
-CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 
 INSERT TO `usuarios` (`nombre`, `email`, `password`, `fecha_de_nacimiento `)
 VALUES
@@ -41,7 +41,7 @@ VALUES
 ('Cristian', 'cristian@gmail.com', 'cristian123', '02/02/2000' );
 ('Hernan', 'hernan@gmail.com', 'hernan123', '15/09/2001' );
 
-INSERT TO `resenias` (`id_pelicula`, `id_usuario`, `resenia_texto`, `fecha_de_creacion`, `fecha_de_actualizacion`,`rating`)
+INSERT INTO `resenias` (`id_pelicula`, `id_usuario`, `resenia_texto`, `fecha_de_creacion`, `fecha_de_actualizacion`,`rating`)
 VALUES
 (338762, 1, 'Muy buena, vale la pena verla!', '24/05/2001','-', 9 );
 

@@ -12,8 +12,7 @@ var generoResultRouter = require('./routes/generoResultRouter');
 var generosRouter = require('./routes/generosRouter');
 var peliculaRouter = require('./routes/peliculaRouter');
 var resultBuscadorRouter = require('./routes/resultBuscadorRouter');
-var registracionRouter = require('./routes/registracion')
-
+var listaUsuariosRouter = require('./routes/listaUsuarios');
 
 var app = express();
 
@@ -35,7 +34,7 @@ app.use("/generoResult", generoResultRouter);
 app.use("/generos", generosRouter);
 app.use("/pelicula", peliculaRouter);
 app.use("/resultBuscador", resultBuscadorRouter);
-app.use("/registracion", registracionRouter)
+app.use("/usuarios", listaUsuariosRouter);
 
 
 
