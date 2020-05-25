@@ -5,7 +5,7 @@ const controller = require("../controllers/registracionController");
 
 
 
-router.get("/", controller.favoritos);
+router.get("/", controller.registracion);
 
 
 module.exports = router;
