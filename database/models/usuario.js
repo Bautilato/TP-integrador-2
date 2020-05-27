@@ -16,6 +16,14 @@ module.exports = function(sequelize, DataTypes){
 
     );
 
+    usuario.associate = function(models){
+        usuario.hasMany(models.Resenias,{
+            as: "resenia" ,
+            foreingKey: "id",
+
+        })
+    };
+
     return usuario;
 
 }
