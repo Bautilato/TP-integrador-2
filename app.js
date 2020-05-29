@@ -14,6 +14,7 @@ var peliculaRouter = require('./routes/peliculaRouter');
 var resultBuscadorRouter = require('./routes/resultBuscadorRouter');
 var listaUsuariosRouter = require('./routes/listaUsuarios');
 
+
 var app = express();
 
 // view engine setup
@@ -35,6 +36,7 @@ app.use("/generos", generosRouter);
 app.use("/pelicula", peliculaRouter);
 app.use("/resultBuscador", resultBuscadorRouter);
 app.use("/usuarios", listaUsuariosRouter);
+
 
 
 

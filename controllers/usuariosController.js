@@ -25,7 +25,20 @@ module.exports = {
             .catch(error =>{
                 res.send(error)
             } )
-    }
+    },
+    
+        buscador: function(req, res){
+            res.render("buscadorUsuarios")
+        },
+
+        buscar: function(req, res){
+            res.render("buscar")
+        },
+        
+       
+       
+
+       }
    
    
-   }
+
