@@ -14,18 +14,19 @@ module.exports = function(sequelize, DataTypes){
         //configuracion adicional
         {
             timestamps: false 
-        }
+        });
 
-    );
+    
         resenia.associate = function(models){
             resenia.belongsTo(models.Usuarios,{
                 as: "usuario" ,
                 foreingKey: "id_usuario",
 
             })
-        };
+        }
 
 
 
-    }
-    return resenia;
+    ;
+    return resenia
+}
