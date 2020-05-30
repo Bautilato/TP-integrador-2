@@ -1,4 +1,5 @@
 const db = require('../database/models');
+const op = db.Sequelize.Op;
 
 module.exports = {
     index: (req,res) => {
@@ -32,7 +33,21 @@ module.exports = {
         },
 
         buscar: function(req, res){
-            res.render("buscar")
+            let loQueSeBusco = req.query.search;
+            db.Usuarios
+            .findAll({
+                where:[ {
+                    nombre: {[op.like] : "% loQueSeBusco%" },
+
+                }]
+            })
+            .then(resultados =>{
+                res.render('usuariosResult', {usuarioEncontrado : resultados})
+            }) 
+            .catch(error =>{
+                res.render("errorbusq", {error : error})
+            } )
+        
         },
         
        
