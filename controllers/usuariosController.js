@@ -37,7 +37,8 @@ module.exports = {
             db.Usuarios
             .findAll({
                 where:[ {
-                    nombre: {[op.like] : "% loQueSeBusco%" },
+                    nombre: {[op.like] : "%" + loQueSeBusco + "%" },
+                   // email: {[op.like] : "%" + loQueSeBusco + "@" + "%"}
 
                 }]
             })
@@ -49,6 +50,16 @@ module.exports = {
             } )
         
         },
+        detalle: function (req,res){
+            
+            db.Usuarios
+            .findOne({
+                where:[{ 
+                    id: {[op.like] : "%" + req.params + "%"},
+                }]
+            })
+            .then(results=>{res.render('detalle', {usuarioDet :results})})
+        }
         
        
        

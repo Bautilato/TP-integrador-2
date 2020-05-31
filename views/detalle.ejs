@@ -84,18 +84,13 @@
         <br>
         <br>
 <body>
-
-    <h2>Usuarios Encontrados</h2>
-    <ul>
-    <% for (var i=0; i< usuarioEncontrado.length; i++){ %>
-        <li>
-           <a href="/usuarios/detalle?<%=usuarioEncontrado[i].id %>"><p> <%= usuarioEncontrado[i].nombre %></p></a> 
-           
-        
-        </li>
-         
+    <% for (var i=0; i< usuarioDet.length; i++){ %>
+    <h2><%= usuarioDet[i].nombre %></h2>
     <% } %>
-    </ul>
+    
+         
+   
+    
 </body>
 <footer>
     <br>
