@@ -9,7 +9,7 @@ router.get("/registracion", controller.registracion);
 router.post('/guardar', controller.guardar);
 router.get("/buscador",controller.buscador);
 router.get("/buscador/buscar", controller.buscar);
-router.get("/detalle", controller.detalle);
+router.get("/detalle/:id", controller.detalle);
 
 
 

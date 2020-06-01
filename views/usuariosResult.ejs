@@ -84,18 +84,37 @@
         <br>
         <br>
 <body>
-
+  <% if(usuarioEncontrado.length !=0) { %>
     <h2>Usuarios Encontrados</h2>
+    
     <ul>
     <% for (var i=0; i< usuarioEncontrado.length; i++){ %>
         <li>
-           <a href="/usuarios/detalle?<%=usuarioEncontrado[i].id %>"><p> <%= usuarioEncontrado[i].nombre %></p></a> 
+           <a href="/usuarios/detalle/<%=usuarioEncontrado[i].id %>"><p> <%= usuarioEncontrado[i].nombre %></p></a> 
            
         
         </li>
          
     <% } %>
     </ul>
+    <% } else {%> <h2>NO ENCONTRE USUARIOS</h2>
+      
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <% } %>
 </body>
 <footer>
     <br>

@@ -84,13 +84,29 @@
         <br>
         <br>
 <body>
-    <% for (var i=0; i< usuarioDet.length; i++){ %>
-    <h2><%= usuarioDet[i].nombre %></h2>
-    <% } %>
+  
+    <h2><%= usuarioDet.nombre %></h2>
+    <main style="margin-left: 30px;">
     
+    <h3>Datos:</h3>
+    <h6><%= usuarioDet.email %></h6>
+    <h6><%= usuarioDet.fecha_de_nacimiento %></h6>
+      <br>
+      <br>
+    <h3>Reseñas</h3>
+    <ul>
+      <% for (var i=0; i< usuarioDet.resenias.length; i++){ %>
+      <li><%= usuarioDet.resenias[i].resenia_texto %></li>
+
+
+
+
+      <% } %>
+
+    </ul>
          
    
-    
+    </main>
 </body>
 <footer>
     <br>
