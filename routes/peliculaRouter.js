@@ -8,5 +8,7 @@ const controller = require("../controllers/peliculaController");
 
 router.get("/", controller.peliculas);
 
+router.post("/crear", controller.crear);
+
 
 module.exports = router;

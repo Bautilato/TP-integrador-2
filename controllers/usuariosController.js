@@ -17,6 +17,8 @@ module.exports = {
     },
     registracion: function(req, res){
         res.render("registracion")
+        
+
     },
     guardar:(req, res) => {
         db.Usuarios
