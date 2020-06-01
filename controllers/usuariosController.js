@@ -25,6 +25,7 @@ module.exports = {
                 email: req.body.email,
                 fecha_de_nacimiento: req.body.fechaDeNacimiento,
                 password: bcryptjs.hashSync(req.body.password,10),
+                
             
             
             })

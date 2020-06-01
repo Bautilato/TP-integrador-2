@@ -67,12 +67,13 @@
             <a class="nav-link disabled favs" href="#"></a>
           </li>
         </ul>
-        <form  action="resultBuscador.html" method="GET" class="form-inline my-2 my-lg-0">
+        <form  action="resultBuscador.html"  method="GET"  ="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2"  name="buscador" type="search"  placeholder="ingrese genero/pelicula..." aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0 miBoton" type="submit">Buscar</button>
           <button type="button" class="btn btn-primary Botonsesion" data-toggle="modal" data-target="#exampleModal">
           Iniciar sesión
           </button>
+          
         </form>
 
       </div>
@@ -84,15 +85,16 @@
         <br>
         <br>
 <body>
-
+      
     <a href="/usuarios/buscador"><h2>Buscador de usuarios</h2></a>
     <br>
     <br>
-    <h3>Lista de usuarios</h3>
-    <ul>
+    <h3 style="margin-left: 30px;" >Lista de usuarios</h3>
+    
+    <ul style="margin-left: 30px;" >
     
     <% for (var i=0; i< listaDeUsuarios.length; i++){ %>
-        <li>
+        <li> 
             <p>Nombre: <%= listaDeUsuarios[i].nombre %></p>
             <p>Email: <%= listaDeUsuarios[i].email %> </p>
             <p>Fecha de nacimiento: <%= listaDeUsuarios[i].fecha_de_nacimiento%></p>
