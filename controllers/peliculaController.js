@@ -28,7 +28,25 @@ module.exports = {
 
 
 
-   } 
+   },
 
+    buscar: function(req, res){
+       let peliculaBuscada = req.params.idDePelicula;
+       console.log(peliculaBuscada);
+       
+        db.Resenias
+        .findAll({
+            where:[{
+                
+            id_pelicula: {[op.like] : "%" + peliculaBuscada + "%" },
+          
+            }]
+        })
+       .then(function(resena){
+            res.render("pelicula",{reseniasEncontradas: resena})
+       }) 
+           
+       
+    }
 
    }

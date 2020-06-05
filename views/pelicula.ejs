@@ -116,29 +116,51 @@
              </div>
 
            </div>
+           
+
 
          </div>
          <br>
-         <div class="recomendaciones">
-           <div class="rec">
-           <h2>Recomendaciones:</h2>
-           </div>
+         <br>
+         <br>
+         
+        
+         <br>
+         <div class="resenias" style="background-color:teal ;">
+          <% if(reseniasEncontradas.length !=0){ %> 
+          <h3 style="color: white; margin-left: 20px;  " >
 
-           <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Opciones</button>
+             Reseñas:
+            </h3>
+             <ul>
+              <% for (var i=0; i< reseniasEncontradas.length; i++){ %>
+                <li>
+                  <%=  reseniasEncontradas[i].resenia_texto   %>
 
-           <div class="dropdown-menu">
-             <a class="dropdown-item" href="#"></a>
-                </select>
-              </div>
+                </li>
 
+                <%}%>
+
+             </ul>
+
+             <%} else{%> <h3>
+               No hay reseñas
+
+             </h3>
+             <%   }%>
+              
+             
+
+
+        
+           
          </div>
-
          <br>
          <br>
          <br>
          <div clase="crearResenia" style="background-color: teal; ">
            <h3 style="color: white;
-           margin-left: 20px;">Dejá tu reseña</h3>
+           margin-left: 20px;">Dejá tu reseña:</h3>
            <form action="/pelicula/crear" method="POST" style="margin-left: 30px; text-align: left;">
             <label for="email" style="color: white;">Email:</label>
             <br> <input type="email" name="email" placeholder="ingrese su email"  required>
@@ -166,6 +188,22 @@
 
 
          </div>
+         <br>
+         <br>
+         <br>
+         <div class="recomendaciones">
+          <div class="rec">
+          <h2>Recomendaciones:</h2>
+          </div>
+
+          <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Opciones</button>
+
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#"></a>
+               </select>
+             </div>
+
+        </div>
          <br>
          <br>
          <br>
