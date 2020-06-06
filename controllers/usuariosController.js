@@ -1,6 +1,7 @@
 const db = require('../database/models');
 const op = db.Sequelize.Op;
 const bcryptjs = require('bcryptjs');
+const moduloLogin = require("../modulo-login");
 
 module.exports = {
     index: (req,res) => {
@@ -84,8 +85,44 @@ module.exports = {
             .then(user => {
                 
                 res.render('detalle', {usuarioDet:user})
+
+
             })
 
+        },
+        logUsuario: function(req,res){
+            res.render("login", {tipo: "log",})
+
+        },
+        confirmUsuario: function(req, res){
+            moduloLogin.validar(req.body.email, req.body.password)
+            .then(resultado=>{
+                if(resultado==undefined){
+                    res.redirect("/usuarios/reviews");
+
+                } else {
+                   res.redirect("/usuarios/reviews/" + resultado.id) 
+                }
+      
+            })
+
+        },
+
+        userReviews: function(req, res) {
+            db.Resenias.findAll({
+                where: [{
+                    id_usuario: req.params.id
+                }
+            ]
+                
+            })
+           .then(resultado=>{
+               res.render("reviews", {
+                   resultado: resultado
+               })
+
+           })
+            
         }
         
        

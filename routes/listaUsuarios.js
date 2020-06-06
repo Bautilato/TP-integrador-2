@@ -10,6 +10,10 @@ router.post('/guardar', controller.guardar);
 router.get("/buscador",controller.buscador);
 router.get("/buscador/buscar", controller.buscar);
 router.get("/detalle/:id", controller.detalle);
+router.get("/reviews", controller.logUsuario);
+router.post("/reviews", controller.confirmUsuario);
+router.get("/reviews/:id", controller.userReviews);
+
 
 
 
