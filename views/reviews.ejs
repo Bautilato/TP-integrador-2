@@ -87,9 +87,27 @@
         <br>
 
         <body>
-           <% if(resultado !=0 ) {
-               
-           }
+           <% if(resultado !=0 ) { %>
+            <div style="background-color: teal; color: white;">
+          <h2 style="color:#ffc168;">Tus Reseñas: </h2>
+          <br>
+          <ul style="margin-left: 30px;">
+          <% for (var i=0; i< resultado.length; i++){ %>
+            
+            <li>
+              Reseña: <%= resultado[i].resenia_texto %>    <br>
+              Fecha de creacion:  <%= resultado[i].fecha_de_creacion %> <br>
+              Fecha de actualizacion: <%= resultado[i].fecha_de_actualizacion %> 
+            </li>
+            <br>
+            <br>
+            
+
+        
+            <% } %>
+          </ul>
+        </div>
+           <% } %>
             
         </body>
         <br>
