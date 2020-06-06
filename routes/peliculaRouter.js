@@ -9,6 +9,6 @@ const controller = require("../controllers/peliculaController");
 router.get("/", controller.peliculas);
 
 router.post("/crear", controller.crear);
-router.get("/buscarResenia", controller.buscar);
+//router.get("/buscarResenia", controller.buscar);
 
 module.exports = router;

@@ -130,10 +130,18 @@
           <% if(reseniasEncontradas.length != 0){ %>
           <h3 style="color: white; margin-left: 20px;" > Reseñas:</h3>
             
-             <ul>
+             <ul style="color: white; margin-left: 10%">
               <% for (var i=0; i< reseniasEncontradas.length; i++){ %>
-                <li>  Reseña: <%= reseniasEncontradas[i].resenia_texto %>        </li>
+                <li>  Usuario: <%=reseniasEncontradas[i].usuario.email %> <br>
+                  Reseña: <%= reseniasEncontradas[i].resenia_texto %>    <br>
+                  Fecha de creacion:  <%= reseniasEncontradas[i].fecha_de_creacion %> <br>
+                  Fecha de actualizacion: <%= reseniasEncontradas[i].fecha_de_actualizacion %> 
+                
+                
+                </li>
+                <br>
                 <% } %>
+                  
 
              </ul>
 
@@ -148,6 +156,7 @@
            <h3 style="color: white;
            margin-left: 20px;">Dejá tu reseña:</h3>
            <form action="/pelicula/crear" method="POST" style="margin-left: 30px; text-align: left;">
+            
             <label for="email" style="color: white;">Email:</label>
             <br> <input type="email" name="email" placeholder="ingrese su email"  required>
            <br><label for="password" style="color: white;">Contraseña:</label> 
