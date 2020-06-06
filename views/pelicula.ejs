@@ -126,34 +126,20 @@
          
         
          <br>
-         <div class="resenias" style="background-color:teal ;">
-          <% if(reseniasEncontradas.length !=0){ %> 
-          <h3 style="color: white; margin-left: 20px;  " >
-
-             Reseñas:
-            </h3>
+         <div class="resenas" style="background-color:teal ;">
+          <% if(reseniasEncontradas.length != 0){ %>
+          <h3 style="color: white; margin-left: 20px;" > Reseñas:</h3>
+            
              <ul>
               <% for (var i=0; i< reseniasEncontradas.length; i++){ %>
-                <li>
-                  <%=  reseniasEncontradas[i].resenia_texto   %>
-
-                </li>
-
-                <%}%>
+                <li>  Reseña: <%= reseniasEncontradas[i].resenia_texto %>        </li>
+                <% } %>
 
              </ul>
 
-             <%} else{%> <h3>
-               No hay reseñas
-
-             </h3>
-             <%   }%>
-              
-             
-
 
         
-           
+           <%  } else { %> <h3>No hay reseñas</h3> <% } %>
          </div>
          <br>
          <br>
