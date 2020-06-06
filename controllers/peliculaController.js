@@ -18,7 +18,7 @@ module.exports = {
     })
     
    .then(resena=>{
-       res.render("pelicula",{reseniasEncontradas: resena})
+       res.render("pelicula",{reseniasEncontradas: resena, idPelicula: peliculaBuscada})
    }) 
        
    
@@ -27,7 +27,7 @@ module.exports = {
        moduloLogin.validar(req.body.email, req.body.password )
        .then(function(usuario ){
            db.Resenias.create ({
-             id_pelicula: req.query.idDePelicula,
+             id_pelicula: req.body.id_pelicula,
              id_usuario: usuario.id,
              resenia_texto: req.body.resenia,
              rating: req.body.rating,
