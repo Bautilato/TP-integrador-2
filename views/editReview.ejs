@@ -87,30 +87,37 @@
         <br>
 
         <body>
-           <% if(resultado !=0 ) { %>
+           
             <div style="background-color: teal; color: white;">
-          <h2 style="color:#ffc168;">Tus Reseñas: </h2>
-          <br>
-          <ul style="margin-left: 30px;">
-          <% for (var i=0; i< resultado.length; i++){ %>
-            
-            <li>
-              Reseña: <%= resultado[i].resenia_texto %>    <br>
-              Rating: <%= resultado[i].rating %> <br>
-              Fecha de creacion:  <%= resultado[i].fecha_de_creacion %> <br>
-              Fecha de actualizacion: <%= resultado[i].fecha_de_actualizacion %> 
-            </li>
-            <br>
-            <a href="/usuarios/reviews/editar/<%= resultado[i].id %>"><button class="btn btn-outline-success my-2 my-sm-0 miBoton">Editar</button></a>
-            <br>
-            <br>
-            
+          <h2 style="color:#ffc168;">Tu Reseñas: </h2>
+          <form  action="/usuarios/reviews/editar/<%= resultado.id %> " method="POST">
+            <div style="margin-left: 30px; color: white;">
+            <label for="email" >Ingresa tu Email</label><br>
+            <input type="email" name="email" placeholder="ejemplo@gmail.com" required><br>
+            </div>
+            <div style="margin-left: 30px; color: white;">
+                <label for="password">Ingresa tu contraseña</label><br>
+                <input type="password" name= "password">
+            </div>
 
-        
-            <% } %>
-          </ul>
+
+
+          <div style="margin-left: 30px; color: white;">
+            <label for="resena">Reseña:</label> <br>
+            <textarea name="resena" id="" cols="50" rows="5"><%= resultado.resenia_texto %></textarea>
+          </div>
+          <br>
+          <div style="margin-left: 30px; color: white;">
+            <label for="rating">Rating:</label>
+            <br><input type="number" name="rating" min="0" max="10" required>
         </div>
-           <% } %>
+        <br>
+        <button class="btn btn-outline-success my-2 my-sm-0 miBoton" value="submit" type="submit" style="margin-left: 30px;"  name="confirmar">Confirmar</button>
+        <br>
+        <br>
+        </div>
+    </form>
+           
             
         </body>
         <br>

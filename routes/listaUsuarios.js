@@ -13,6 +13,9 @@ router.get("/detalle/:id", controller.detalle);
 router.get("/reviews", controller.logUsuario);
 router.post("/reviews", controller.confirmUsuario);
 router.get("/reviews/:id", controller.userReviews);
+router.get("/reviews/editar/:id", controller.editar);
+router.post("/reviews/editar/:id", controller.confirmacionEdit);
+
 
 
 

@@ -123,7 +123,45 @@ module.exports = {
 
            })
             
-        }
+        },
+
+        editar: function(req,res){
+            db.Resenias.findOne({  
+                where: [{id: req.params.id}]
+            })
+            .then(resultado=>{
+                res.render('editReview',{resultado:resultado})
+            })
+        
+        },
+
+        confirmacionEdit: function(req,res){
+            moduloLogin.validar(req.body.email, req.body.password)
+            .then(resultado=>{
+                if(resultado != undefined){
+                    db.Resenias.update({
+                        resenia_texto: req.body.resena,
+                        rating: req.body.rating,
+                    }, {
+                            where:{
+                                id: req.params.id
+                            }
+
+                    })
+                    
+                    .then(() => {
+                        res.redirect('/usuarios/reviews/' + resultado.id);
+                    })
+                }else{
+                        return res.redirect('/usuarios/reviews/edit/' + req.params.id)
+                    }
+                
+            })
+
+
+
+        },
+
         
        
        
