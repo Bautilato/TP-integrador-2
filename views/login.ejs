@@ -87,7 +87,31 @@
         <br>
 
         <body>
-            <div style="background-color: teal ; text-align: center ;">
+            <div style="background-color: teal ; text-align: center ; ">
+                   <% if(tipo == "delete"){%>
+                    <form action="/usuarios/reviews/eliminar/ <%= deleteId %> " method="POST">
+                      <h1 style="color: white;"> 
+                        Eliminar
+                        
+                      </h1>
+                      <p style="color: white; margin-left: 10px;" >
+                        Logueate para eliminar la reseña...
+                      </p>
+                      <div style="margin-left: 30px; color: white;">
+                        <label for="email" >Ingresa tu Email</label><br>
+                        <input type="email" name="email" placeholder="ejemplo@gmail.com" required><br>
+                        </div>
+
+                        <br>
+                        <div style="margin-left: 30px; color: white;">
+                            <label for="password">Ingresa tu contraseña</label><br>
+                            <input type="password" name= "password">
+                        </div>
+                        <br>
+
+                        <button class="btn btn-outline-success my-2 my-sm-0 miBoton" type="submit">Confirmar</button>
+                    </form>
+                    <%} else{ %>
 
                 <form action="/usuarios/reviews" method="POST" >
                     <h2>
@@ -103,15 +127,10 @@
                      <br>
                      <button class="btn btn-outline-success my-2 my-sm-0 miBoton" value="submit" type="submit">Iniciar</button>
                     
-
-            
-
-
-
-
-
-
                 </form>
+                <%} %>
+
+
                 <br>
                 <br>
 

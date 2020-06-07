@@ -160,7 +160,32 @@ module.exports = {
 
 
 
+
         },
+        borrarReview: function(req,res){
+            res.render("login", {
+                tipo:"delete", deleteId: req.params.id
+            })
+        },
+
+        confirmacionBorrar: function(req,res){
+            moduloLogin.validar(req.body.email, req.body.password)
+            .then(resultado=> {
+                if(resultado!=null ){
+                    db.Resenias.destroy({
+                        where:{
+                            id: req.params.id, 
+                        }
+
+
+                    }) 
+                    res.redirect("/usuarios/reviews/ " + resultado.id)
+                    } else {
+                        res.redirect("/usuarios/reviews/eliminar/" + req.params.id)
+                    }                   
+                
+            })
+        }
 
         
        
