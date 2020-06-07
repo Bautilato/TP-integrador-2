@@ -153,7 +153,7 @@ module.exports = {
                         res.redirect('/usuarios/reviews/' + resultado.id);
                     })
                 }else{
-                        return res.redirect('/usuarios/reviews/edit/' + req.params.id)
+                        return res.redirect('/usuarios/registracion')
                     }
                 
             })
@@ -181,7 +181,7 @@ module.exports = {
                     }) 
                     res.redirect("/usuarios/reviews/ " + resultado.id)
                     } else {
-                        res.redirect("/usuarios/reviews/eliminar/" + req.params.id)
+                        res.redirect("/usuarios/registracion")
                     }                   
                 
             })

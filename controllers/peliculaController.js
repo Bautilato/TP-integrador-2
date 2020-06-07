@@ -25,7 +25,8 @@ module.exports = {
 },
    crear: function(req,res) {
        moduloLogin.validar(req.body.email, req.body.password )
-       .then(function(usuario ){
+       .then(resultado=> {
+        if(resultado!=null ){
            db.Resenias.create ({
              id_pelicula: req.body.id_pelicula,
              id_usuario: usuario.id,
@@ -38,7 +39,9 @@ module.exports = {
            })
 
 
-       })
+       } else { 
+        res.redirect("/usuarios/registracion")
+       }})
  },
 
    // buscar: function(req, res){
