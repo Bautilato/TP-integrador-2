@@ -25,8 +25,9 @@ module.exports = {
 },
    crear: function(req,res) {
        moduloLogin.validar(req.body.email, req.body.password )
-       .then(resultado=> {
-        if(resultado!=null ){
+       .then(function(usuario){
+       
+        if(usuario!=null ){
            db.Resenias.create ({
              id_pelicula: req.body.id_pelicula,
              id_usuario: usuario.id,
@@ -38,11 +39,14 @@ module.exports = {
                res.redirect("/home")
            })
 
-
+        
+        
+          
        } else { 
         res.redirect("/usuarios/registracion")
        }})
- },
+      },
+    
 
    // buscar: function(req, res){
      // let peliculaBuscada = req.params.idDePelicula;
