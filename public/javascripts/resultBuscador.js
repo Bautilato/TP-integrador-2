@@ -89,7 +89,7 @@ for (var i = 0; i < data.results.length; i++) {
 
 
         li = "<li class='generoprimero'>"
-        li +=   "<a href='pelicula/idDePelicula="+idDePelicula+"'>"
+        li +=   "<a href='/pelicula?idDePelicula="+idDePelicula+"'>"
         li +=     "<div class='nombredepelicula'>"
         li +=       "<h2>" + titulo + "</h2>"
         li +=      "</div>"
