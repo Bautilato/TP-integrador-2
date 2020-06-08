@@ -95,7 +95,7 @@ module.exports = {
 
         },
         confirmUsuario: function(req, res){
-            moduloLogin.validar(req.body.email, req.body.password)
+            moduloLogin.validar(req.body.email, bcryptjs.compareSync(req.body.password, req.body.password ))
             .then(resultado=>{
                 if(resultado==undefined){
                     res.redirect("/usuarios/reviews");
@@ -136,7 +136,7 @@ module.exports = {
         },
 
         confirmacionEdit: function(req,res){
-            moduloLogin.validar(req.body.email, req.body.password)
+            moduloLogin.validar(req.body.email, bcryptjs.compareSync(req.body.password, req.body.password ))
             .then(resultado=>{
                 if(resultado != undefined){
                     db.Resenias.update({
@@ -169,7 +169,7 @@ module.exports = {
         },
 
         confirmacionBorrar: function(req,res){
-            moduloLogin.validar(req.body.email, req.body.password)
+            moduloLogin.validar(req.body.email, bcryptjs.compareSync(req.body.password, req.body.password ))
             .then(resultado=> {
                 if(resultado!=null ){
                     db.Resenias.destroy({

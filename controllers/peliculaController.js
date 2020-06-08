@@ -24,7 +24,7 @@ module.exports = {
    
 },
    crear: function(req,res) {
-       moduloLogin.validar(req.body.email, req.body.password )
+       moduloLogin.validar(req.body.email, bcryptjs.compareSync(req.body.password, req.body.password ) )
        .then(function(usuario){
        
         if(usuario!=null ){
