@@ -95,10 +95,10 @@
 <body>
   <% if(usuarioEncontrado.length !=0) { %>
     <h2>Usuarios Encontrados</h2>
-    
+    <div style="background-color: #ffc168 ;color: white;">
     <ul>
     <% for (var i=0; i< usuarioEncontrado.length; i++){ %>
-        <li>
+        <li style="margin-left: 10px;">
            <a href="/usuarios/detalle/<%=usuarioEncontrado[i].id %>"><p> <%= usuarioEncontrado[i].nombre %></p></a> 
            
         
@@ -106,6 +106,7 @@
          
     <% } %>
     </ul>
+    </div>
     <% } else {%> <h2>NO ENCONTRE USUARIOS</h2>
       
       <br>

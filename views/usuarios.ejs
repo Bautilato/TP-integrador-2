@@ -94,12 +94,11 @@
         <br>
         <br>
 <body>
-      
+      <div style="background-color:teal;">
     <a href="/usuarios/buscador"><h2>Buscador de usuarios</h2></a>
     <br>
     <br>
     <h3 style="margin-left: 30px;" >Lista de usuarios</h3>
-    
     <ul style="margin-left: 30px;" >
     
     <% for (var i=0; i< listaDeUsuarios.length; i++){ %>
@@ -109,9 +108,11 @@
             <p>Fecha de nacimiento: <%= listaDeUsuarios[i].fecha_de_nacimiento%></p>
         
         </li>
-         
+         <br>
     <% } %>
     </ul>
+      </div>
+  </div>
 </body>
 <footer>
     <br>
